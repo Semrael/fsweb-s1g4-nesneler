@@ -171,10 +171,21 @@ console.log(
 	Örnek: AnahtardanDegerlendirmeAl(degerlendirmeler,0) şunu döndürmeli: "Nalan isimli kişi 5 puan verdi ve şunları yazdı: Mükemmel atmosfer ve mükemmel vegan seçenekleri!"
 */
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-  /*Kodlar buraya*/
+function AnahtardanDegerlendirmeAl(dizi, diziIndeksi /*Kodlar buraya*/) {
+  const chosenFeedBack = dizi[diziIndeksi];
+
+  const str1 =
+    chosenFeedBack.isim +
+    " isimli kişi " +
+    chosenFeedBack.puan +
+    " puan verdi ve şunları yazdı: " +
+    chosenFeedBack.geribildirim; /*Kodlar buraya*/
+
+  const str = `${chosenFeedBack.isim} isimli kişi ${chosenFeedBack.puan} puan verdi ve şunları yazdı: ${chosenFeedBack.geribildirim} `;
+  return str;
 }
 
+console.log("G6", AnahtardanDegerlendirmeAl(degerlendirmeler, 0));
 /*  Görev 7:  
 	Diziden en son değerlendirmeyi döndüren adı `SonDegerlendirmeyiAl` olan bir fonksiyon yazın 
 	
